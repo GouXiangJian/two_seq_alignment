@@ -1,0 +1,37 @@
+Author
+============
+
+Xiangjian Gou (862137261@qq.com)
+
+Date
+============
+
+2018/12/28
+
+Require
+============
+
+These script are written in Perl, so you should have Perl on your computer.
+You can download Perl from https://www.perl.org/
+
+Function
+========
+
+1.  Local alignment between two sequences by using   Smith-Waterman algorithm.
+2. Global alignment between two sequences by using Needleman-Wunsch algorithm.
+
+Usage
+=====
+
+perl   Smith_Waterman.pl -f <fasta> -o <output> -m <match> -u <unmatch> -s <space>
+perl Needleman_Wunsch.pl -f <fasta> -o <output> -m <match> -u <unmatch> -s <space>
+
+Required Options: 
+  -f|-fasta   <file> : fasta file contains 2 sequences
+
+Optional Options:
+  -o|-output  <file> : a file name to store the output (default: STDOUT)
+  -m|-match   <int>  : a score when character match    (default:  1)
+  -u|-unmatch <int>  : a score when character unmatch  (default: -1)
+  -s|-space   <int>  : a score when character space    (default: -2)
+  -h|-help           : show the help information
